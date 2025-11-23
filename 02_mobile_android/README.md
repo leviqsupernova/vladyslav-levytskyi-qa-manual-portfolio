@@ -10,6 +10,6 @@ The purpose is multimodal: to show my ability to use a third-party service for t
 
 Due to the scope and natural limitations, an ad hoc approach was used.
 
-The artifacts were exported directly from [Qase.io](https://qase.io/); the bug report had only a .csv format available for export, hence, after converting it to .pdf, the report looks especially bland and misses critical information. For proper evaluation of my bug reporting skill, refer to [02_web_firefox](https://github.com/leviqsupernova/vladyslav-levytskyi-qa-manual-portfolio/tree/master/01_web_firefox).
+The artifacts were exported directly from [Qase.io](https://qase.io/); the bug report had only a .csv format available for export, hence, after converting it to .pdf, the report looks especially bland and misses critical information. For proper evaluation of my bug reporting skill, refer to [01_web_firefox](https://github.com/leviqsupernova/vladyslav-levytskyi-qa-manual-portfolio/tree/master/01_web_firefox).
 
 I considered equivalence partitioning and boundary value techniques for demonstration, but I specifically wanted to reliably find failures within a reasonable amount of time.
