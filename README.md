@@ -1,6 +1,6 @@
 # QA Portfolio
 
-The portfolio consists of three projects: a website testing, mobile apps testing, and API testing/investigation project.
+The portfolio consists of four projects: a website testing, mobile apps testing, various documentation, and a simple API testing project.
 
 The testware is representative of my real skills. This can be verified in a controlled environment without external sources.
 
