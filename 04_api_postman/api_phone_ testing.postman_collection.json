@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "removed",
+		"name": "removed",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49561007"
+	},
+	"item": [
+		{
+			"name": "Journal Export",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Used a snippet.",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"// Decided to add fields verification, looked up the scripting format, edited to include the defined fields to check.",
+							"",
+							"pm.test(\"Fields verification\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData[0]).to.have.property(\"caller\");",
+							"    pm.expect(jsonData[0]).to.have.property(\"calldate\");",
+							"    pm.expect(jsonData[0]).to.have.property(\"duration\");",
+							"    pm.expect(jsonData[0]).to.have.property(\"call_type\");",
+							"    pm.expect(jsonData[0]).to.have.property(\"connected_with\");",
+							"    pm.expect(jsonData[0]).to.have.property(\"uniqueid\");",
+							"    pm.expect(jsonData[0]).to.have.property(\"employee_number\");",
+							"    pm.expect(jsonData[0]).to.have.property(\"remote_ip\");",
+							"    pm.expect(jsonData[0]).to.have.property(\"department\");",
+							"    pm.expect(jsonData[0]).to.have.property(\"recording_wav\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Auth-Key",
+						"value": "{{authK}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{root}}/calls/list?export_type={{eType}}&from={{from}}&to={{to}}&fields={{fields}}&order=calldate asc",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"calls",
+						"list"
+					],
+					"query": [
+						{
+							"key": "export_type",
+							"value": "{{eType}}",
+							"description": "json"
+						},
+						{
+							"key": "from",
+							"value": "{{from}}"
+						},
+						{
+							"key": "to",
+							"value": "{{to}}"
+						},
+						{
+							"key": "fields",
+							"value": "{{fields}}"
+						},
+						{
+							"key": "order",
+							"value": "calldate asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Callback",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Snippet.",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Auth-Key",
+						"value": "{{authK}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "extension",
+							"value": "{{extn}}",
+							"type": "text"
+						},
+						{
+							"key": "destination",
+							"value": "{{dst}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{root}}/callback/outward_call",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"callback",
+						"outward_call"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SIP Availability",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Snippet.",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"// Looked up proper a verification script teamplate to check if the object is json.",
+							"",
+							"pm.test(\"Json verification\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.be.an('array');",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Auth-Key",
+						"value": "{{authK}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{root}}/sipstatus/online/?export_type={{eType}}",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"sipstatus",
+						"online",
+						""
+					],
+					"query": [
+						{
+							"key": "export_type",
+							"value": "{{eType}}",
+							"description": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
