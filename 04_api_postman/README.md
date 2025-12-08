@@ -12,4 +12,6 @@ All the tasks were successfully completed using correct methods and simple scrip
 
 The service's API was used to create proper query and header parameters.  
 
-The test was also repeated via curl in a Linux console and successfully returned the expected responses.  
+The test was also repeated via curl in a Linux console and successfully returned the expected responses.
+
+![postman-meme](https://github.com/leviqsupernova/vladyslav-levytskyi-qa-manual-portfolio/blob/master/04_api_postman/postman-gege.jpg)
