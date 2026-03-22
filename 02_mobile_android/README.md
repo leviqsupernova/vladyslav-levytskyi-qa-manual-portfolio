@@ -14,4 +14,4 @@ The artifacts were exported directly from [Qase.io](https://qase.io/); the bug r
 
 I considered equivalence partitioning and boundary value techniques for demonstration, but I specifically wanted to reliably find failures within a reasonable amount of time.
 
-The simple-ua-report-at-nda.xlxs is my personal best from my last workplace. It's based on a real mine sweeper style Android game. All the sensitive information was removed. The report format and language were set by the management, hence the simplicity.
+The [simple-ua-report-at-nda.xlxs](https://github.com/leviqsupernova/vladyslav-levytskyi-qa-manual-portfolio/blob/master/02_mobile_android/simple-ua-report-at-nda.xlsx) is my personal best from my last workplace. It's based on a real mine sweeper style Android game. All the sensitive information was removed. The report format and language were set by the management, hence the simplicity.
