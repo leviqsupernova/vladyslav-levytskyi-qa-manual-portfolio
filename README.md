@@ -8,6 +8,6 @@ The testware is partially based on a QA course materials, but mostly on my own r
 
 My English command is representative of my real writing skills (C1+). This can be verified in a controlled environment without external sources.
 
-P.S. I conjured an experimental mobile browser testing website you can find [here](https://github.com/leviqsupernova/microtest) or visit [directly](https://leviqsupernova.github.io/microtest/).
+P.S. I conjured an experimental mobile browser testing web app you can find [here](https://github.com/leviqsupernova/microtest) or visit [directly](https://leviqsupernova.github.io/microtest/).
 
 ![QA Meme](https://i.redd.it/0ixr5eqro05f1.jpeg)
